@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Szolgáltatások – Diszkertek</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
 <header class="header">
-    <div class="container">
-        <div class="logo">
-            <img src="assets/img/logo.img" alt="">
-        </div>
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <img src="assets/img/logo.webp" alt="Diszkertek logó">
+        </a>
         <nav class="nav">
             <ul>
                 <li><a href="index.html">Főoldal</a></li>
@@ -23,6 +23,9 @@
                 <li><a href="kapcsolat.html">Kapcsolat</a></li>
             </ul>
         </nav>
+        <button class="nav-toggle" aria-label="Menü">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
@@ -33,33 +36,30 @@
     </div>
 </section>
 
-<section class="services">
+<section class="services services-page">
     <div class="container">
-
-        <div class="service-item">
-            <img src="assets/img/szolgaltatas1.img" alt="">
-            <h2>Kertépítés</h2>
-            <p>Professzionális kertépítés a tereprendezéstől a növénytelepítésig. Modern, tartós és esztétikus megoldások.</p>
+        <div class="service-grid">
+            <article class="service-item">
+                <img src="assets/img/szolgaltatas-1.webp" alt="Kertépítés">
+                <h3>Kertépítés</h3>
+                <p>Professzionális kertépítés a tereprendezéstől a növénytelepítésig. Modern, tartós és esztétikus megoldások.</p>
+            </article>
+            <article class="service-item">
+                <img src="assets/img/szolgaltatas-2.webp" alt="Kerttervezés">
+                <h3>Kerttervezés</h3>
+                <p>Letisztult, modern kerttervek, amelyek illeszkednek otthonod stílusához és igényeidhez.</p>
+            </article>
+            <article class="service-item">
+                <img src="assets/img/szolgaltatas-3.webp" alt="Öntözőrendszer telepítés">
+                <h3>Öntözőrendszer telepítés</h3>
+                <p>Automata öntözőrendszerek kiépítése, karbantartása és optimalizálása, víztakarékos megoldásokkal.</p>
+            </article>
+            <article class="service-item">
+                <img src="assets/img/szolgaltatas-4.webp" alt="Növénytelepítés">
+                <h3>Növénytelepítés</h3>
+                <p>Minőségi növények ültetése, talajelőkészítéssel és szakmai tanácsadással, az adott kert adottságaihoz igazítva.</p>
+            </article>
         </div>
-
-        <div class="service-item">
-            <img src="assets/img/szolgaltatas2.img" alt="">
-            <h2>Kerttervezés</h2>
-            <p>Letisztult, modern kerttervek, amelyek illeszkednek otthonod stílusához és igényeidhez.</p>
-        </div>
-
-        <div class="service-item">
-            <img src="assets/img/szolgaltatas3.img" alt="">
-            <h2>Öntözőrendszer telepítés</h2>
-            <p>Automata öntözőrendszerek kiépítése, karbantartása és optimalizálása.</p>
-        </div>
-
-        <div class="service-item">
-            <img src="assets/img/szolgaltatas4.img" alt="">
-            <h2>Növénytelepítés</h2>
-            <p>Minőségi növények ültetése, talajelőkészítéssel és szakmai tanácsadással.</p>
-        </div>
-
     </div>
 </section>
 
@@ -68,6 +68,12 @@
         <p>© 2026 Diszkertek – Minden jog fenntartva.</p>
     </div>
 </footer>
+
+<script>
+const navToggle=document.querySelector('.nav-toggle');
+const nav=document.querySelector('.nav');
+navToggle.addEventListener('click',()=>{nav.classList.toggle('open');navToggle.classList.toggle('open');});
+</script>
 
 </body>
 </html>

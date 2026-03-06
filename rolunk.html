@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rólunk – Diszkertek</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
 <header class="header">
-    <div class="container">
-        <div class="logo">
-            <img src="assets/img/logo.img" alt="">
-        </div>
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <img src="assets/img/logo.webp" alt="Diszkertek logó">
+        </a>
         <nav class="nav">
             <ul>
                 <li><a href="index.html">Főoldal</a></li>
@@ -23,24 +23,55 @@
                 <li><a href="kapcsolat.html">Kapcsolat</a></li>
             </ul>
         </nav>
+        <button class="nav-toggle" aria-label="Menü">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
 <section class="page-header">
     <div class="container">
-        <h1>Rólunk</h1>
-        <p>Ismerd meg csapatunkat és munkafolyamatainkat.</p>
+        <h1>Bemutatkozás</h1>
+        <p>A Díszkertek csapata</p>
     </div>
 </section>
 
 <section class="about">
     <div class="container">
 
-        <h2>Kik vagyunk?</h2>
-        <p>Budakalászi kertépítő csapat vagyunk, több mint 10 év tapasztalattal. Célunk, hogy modern, tartós és esztétikus kerteket hozzunk létre ügyfeleink számára.</p>
+        <p>A Díszkertek Szépkertek 2010-ben kezdte meg kerti munkák kivitelezésével foglalkozó tevékenységét. Alapítója Varga István, aki 3. generációs kertész családból származik. Édesapja és nagyapja is dísznövény termesztő volt, saját kertészettel.</p>
 
-        <h2>Miért minket válassz?</h2>
-        <p>Megbízhatóság, precizitás és minőségi munkavégzés. Minden projektet egyedi igények alapján valósítunk meg.</p>
+        <p>István korábban (1992-től) a Garri Kft. társalapítója és ügyvezető igazgatója volt. A cég vezetése során a teljes magyar piacot és több nemzetközi régiót láttak el saját készítésű termőfölddel és egyéb kertészettel kapcsolatos alapanyaggal, felszereléssel.</p>
+
+        <p>A Díszkertek Szépkertek csapata képes megoldani szakembereinek és kapcsolati hálójának köszönhetően minden kertészeti munkával kapcsolatos feladatot. Legyen szó: kerttervezésről, öntözőrendszer telepítésről, favágásról döntéssel, alpintechnikával vagy daruskocsival, bozótirtásról, tereprendezésről (kézi és gépi), növények beszerzéséről, szállításáról és telepítéséről, füvesítésről, rendszeres kertfenntartásról vagy növényvédelemről. Bővebben tájékozódhat a Szolgáltatások menüpont alatt.</p>
+
+        <p>Jelenlegi célunk, hogy ügyfeleinknek segítsünk megvalósítani a kertjükkel kapcsolatos vágyaikat, ezáltal a Díszkertek Szépkertek méltó legyen 3. generációs múltjához.</p>
+
+        <h3>Válasszon minket, ha fontos Önnek a</h3>
+
+        <h4>Minőség</h4>
+        <ul>
+            <li>Jó minőségű fűmag</li>
+            <li>Tápanyaggal feltöltött növények</li>
+            <li>Hatékony, ipari növényvédő szerek</li>
+            <li>Profi kézi és gépi felszerelés</li>
+        </ul>
+
+        <h4>Megbízhatóság</h4>
+        <ul>
+            <li>Szakképzett csapat</li>
+            <li>Széleskörű kapcsolati háló</li>
+            <li>Határidők betartása</li>
+            <li>10+ éves cég</li>
+        </ul>
+
+        <h4>Gyorsaság</h4>
+        <ul>
+            <li>Könnyű elérhetőség</li>
+            <li>Díjmentes helyszíni felmérés</li>
+            <li>Hatékony, gyors munkavégzés</li>
+            <li>Szervezett csapat</li>
+        </ul>
 
     </div>
 </section>
@@ -50,6 +81,12 @@
         <p>© 2026 Diszkertek – Minden jog fenntartva.</p>
     </div>
 </footer>
+
+<script>
+const navToggle=document.querySelector('.nav-toggle');
+const nav=document.querySelector('.nav');
+navToggle.addEventListener('click',()=>{nav.classList.toggle('open');navToggle.classList.toggle('open');});
+</script>
 
 </body>
 </html>

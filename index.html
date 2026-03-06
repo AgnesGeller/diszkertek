@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diszkertek – Kertépítés és kerttervezés</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/favikon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <header class="header">
-    <div class="container">
-        <div class="logo">
-            <img src="assets/img/der.png" alt="Diszkertek logó">
-        </div>
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <img src="assets/img/logo.png" alt="Diszkertek logó">
+        </a>
         <nav class="nav">
             <ul>
                 <li><a href="index.html" class="active">Főoldal</a></li>
@@ -24,63 +26,69 @@
                 <li><a href="kapcsolat.html">Kapcsolat</a></li>
             </ul>
         </nav>
+        <button class="nav-toggle" aria-label="Menü">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
-<section class="hero" style="background-image:url('assets/img/hero.jpg');">
+<section class="hero" style="background-image:url('assets/img/wave.jpg');">
+    <div class="hero-overlay"></div>
+
     <div class="hero-content">
-        <h1>Álmaid kertje egy karnyújtásnyira</h1>
-        <p>Minőségi kertépítés és kerttervezés Budakalászon és környékén.</p>
-        <a href="kapcsolat.html" class="btn">Kapcsolat</a>
+        <h1>Tisztelt Kerttulajdonos!</h1>
+        <p>Szép és Egészséges Kertet szeretne? Nincs ideje, energiája, felszerelése?<br>
+        Bízza profikra kertjét! Teljeskörű karbantartást! Növényvédelmet!</p>
+        <p>Minden ami kerttel kapcsolatos.<br>
+        Teljeskörű tervezés, építés, fenntartás!</p>
+        <p><strong>+36 70 634 9630</strong></p>
     </div>
 </section>
-
 <section class="services">
     <div class="container">
         <h2>Szolgáltatásaink</h2>
-
         <div class="service-grid">
-
-            <div class="service-item">
-                <img src="assets/img/csapat.jpg" alt="">
+            <article class="service-item">
+                <img src="assets/img/szolgaltatas-1.webp" alt="Kertépítés">
                 <h3>Kertépítés</h3>
                 <p>Teljes körű kertépítés a tereprendezéstől a növénytelepítésig, modern és tartós megoldásokkal.</p>
-            </div>
-
-            <div class="service-item">
-                <img src="assets/img/istvan.jpg" alt="">
+            </article>
+            <article class="service-item">
+                <img src="assets/img/szolgaltatas-2.webp" alt="Kerttervezés">
                 <h3>Kerttervezés</h3>
                 <p>Letisztult, modern kerttervek, amelyek illeszkednek otthonod stílusához és igényeidhez.</p>
-            </div>
-
-            <div class="service-item">
-                <img src="assets/img/szolgaltatas3.img" alt="">
+            </article>
+            <article class="service-item">
+                <img src="assets/img/szolgaltatas-3.webp" alt="Öntözőrendszer">
                 <h3>Öntözőrendszer</h3>
                 <p>Automata öntözőrendszerek telepítése, karbantartása és optimalizálása.</p>
-            </div>
-
+            </article>
         </div>
     </div>
 </section>
 
 <section class="references">
     <div class="container">
-        <h2>Referenciák</h2>
-
+        <h2>Legújabb munkáink</h2>
+        <p class="ref-intro">
+            Évről évre változatos és egyedi megrendeléseket teljesítünk. Legyen szó egy meglévő kert átalakításáról vagy egy teljesen új kert kialakításáról.
+        </p>
         <div class="ref-grid">
-            <img src="assets/img/ref1.img" class="ref-item">
-            <img src="assets/img/ref2.img" class="ref-item">
-            <img src="assets/img/ref3.img" class="ref-item">
+            <img src="assets/img/ref-1.webp" alt="Referencia 1" class="ref-item">
+            <img src="assets/img/ref-2.webp" alt="Referencia 2" class="ref-item">
+            <img src="assets/img/ref-3.webp" alt="Referencia 3" class="ref-item">
         </div>
-
-        <a href="referenciak.html" class="btn">További munkáink</a>
+        <div class="ref-cta">
+            <a href="referenciak.html" class="btn">Referencia munkáink</a>
+        </div>
     </div>
 </section>
 
 <section class="cta">
     <div class="container">
         <h2>Megvalósítjuk álmaid kertjét</h2>
-        <a href="kapcsolat.html" class="btn">Lépj kapcsolatba velünk</a>
+        <p>Vedd fel velünk a kapcsolatot, és megtervezzük, majd megépítjük a hozzád illő kertet.</p>
+        <a href="kapcsolat.html" class="btn btn-light">Lépj kapcsolatba velünk</a>
     </div>
 </section>
 
@@ -89,6 +97,12 @@
         <p>© 2026 Diszkertek – Minden jog fenntartva.</p>
     </div>
 </footer>
+
+<script>
+const navToggle=document.querySelector('.nav-toggle');
+const nav=document.querySelector('.nav');
+navToggle.addEventListener('click',()=>{nav.classList.toggle('open');navToggle.classList.toggle('open');});
+</script>
 
 </body>
 </html>
